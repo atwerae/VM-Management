@@ -13,7 +13,7 @@ $VM_Name = get-vm|Where-Object {$_.name -like '*' + $VMname + '*'}
                 if (-Not $chosen_vm ) {
                     Write-Host('You must select a Valid VM')
                     }                               
-                else{ return $VM_Name.name[$chosen_vm]}
+                else{ return $VM_Name.name[$chosen_vm-1]}
                                                 }
 }
 #This function takes the choosen vm and gives the three options for alter the state of the vm or remove the vm. 
